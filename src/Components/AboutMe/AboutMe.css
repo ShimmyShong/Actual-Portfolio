@@ -1,0 +1,35 @@
+.about-me {
+    height:90vh;
+}
+
+.slide-left {
+    animation: slide-left 1.5s ease-in-out;
+}
+
+.slide-right {
+    animation: slide-right 1.5s ease-in-out;
+}
+
+@keyframes slide-left {
+    from {
+        opacity: 0;
+        transform:translateX(-250px)
+    }
+
+    to {
+        opacity: 1;
+        transform:translateX(0)
+    }
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        transform:translateX(350px)
+    }
+
+    to {
+        opacity: 1;
+        transform:translateX(0)
+    }
+}
