@@ -6,8 +6,6 @@ function App() {
     <>
       <Header />
       <AboutMe />
-      <AboutMe />
-      <AboutMe />
     </>
   );
 }
