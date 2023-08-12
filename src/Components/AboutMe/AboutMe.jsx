@@ -1,22 +1,37 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './AboutMe.css'
 import Me from '../../Images/me.jpg'
+import glowCircle from '../../SVGs/nnneon.svg'
+import glowTriangle from '../../SVGs/nnneonTriangle.svg'
+import blob0 from '../../SVGs/blob.svg'
+import blob1 from '../../SVGs/blob (1).svg'
+import blob2 from '../../SVGs/blob (2).svg'
+import blob3 from '../../SVGs/blob (3).svg'
+import blob4 from '../../SVGs/blob (4).svg'
+import blob5 from '../../SVGs/blob (5).svg'
 import circle from '../../SVGs/circle.svg'
-import doodle from '../../SVGs/doodle.svg'
-import rectangle from '../../SVGs/rectangle.svg'
-import squiggleLine from '../../SVGs/squiggleLine.svg'
-import triangle from '../../SVGs/triangle.svg'
-import wave from '../../SVGs/wave.svg'
-import zigzag from '../../SVGs/zigzag.svg'
 const svgArray = [
+    blob0,
+    blob1,
+    blob2,
+    blob3,
     circle,
-    doodle,
-    rectangle,
-    squiggleLine,
-    triangle,
-    wave,
-    zigzag
+    blob4,
+    blob5,
 ]
+
+const shuffle = (array) => {
+    return array.map((a) => ({ sort: Math.random(), value: a }))
+        .sort((a, b) => a.sort - b.sort)
+        .map((a) => a.value);
+};
+
+function getRandomVar() {
+    const randomDuration = `${Math.round(Math.random() * 100) + 20}s`; // Generate a random animation duration
+    return [randomDuration];
+}
+
+const shuffledArray = shuffle(svgArray)
 
 export default function AboutMe() {
     const ref = useRef(null)
@@ -44,22 +59,28 @@ export default function AboutMe() {
         if (ref.current) {
             observer.observe(ref.current);
         }
-
         return () => observer.disconnect();
     }, [])
 
     return (
         <div className="about-me flex justify-center items-center flex-col">
             <div className='shapes'>
-                {svgArray.map(svg => {
-                    return <img src={svg} alt='svg' className='svg' />
+                {shuffledArray.map((svg, index) => {
+                    const randomVar = getRandomVar(); // Get an array of random style properties
+                    const styleObject = {
+                        animationDuration: randomVar[0],
+                    };
+                    return <img src={svg} alt='svg' className='svg' style={styleObject} key={index} />;
                 })}
-                <img src={zigzag} alt="zig" className='svg' />
             </div>
-            <img src={Me} alt="picture of me" className='rounded-full m-4' id='me' />
-            <div ref={ref} className="text-3xl text-white font-bold">
-                <p className='m-0'>Hello!</p>
-                <p className=''>My name is Hunter Tran.</p>
+            <div className="mt-[-15rem]">
+                <img src={glowCircle} alt="" className='glow skew-x-12 absolute -z-10' />
+                <img src={glowTriangle} alt="" className='glow translate-x-[-40%] translate-y-[-40%] skew-y-[-15deg] skew-x-[10deg] absolute -z-10' />
+                <img src={Me} alt="picture of me" className='rounded-full' id='me' />
+                <div ref={ref} className="text-3xl text-white font-bold">
+                    <p className='m-0'>Hello!</p>
+                    <p className=''>My name is Hunter Tran.</p>
+                </div>
             </div>
         </div>
     )
