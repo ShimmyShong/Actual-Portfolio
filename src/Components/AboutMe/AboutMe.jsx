@@ -1,6 +1,22 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './AboutMe.css'
 import Me from '../../Images/me.jpg'
+import circle from '../../SVGs/circle.svg'
+import doodle from '../../SVGs/doodle.svg'
+import rectangle from '../../SVGs/rectangle.svg'
+import squiggleLine from '../../SVGs/squiggleLine.svg'
+import triangle from '../../SVGs/triangle.svg'
+import wave from '../../SVGs/wave.svg'
+import zigzag from '../../SVGs/zigzag.svg'
+const svgArray = [
+    circle,
+    doodle,
+    rectangle,
+    squiggleLine,
+    triangle,
+    wave,
+    zigzag
+]
 
 export default function AboutMe() {
     const ref = useRef(null)
@@ -34,6 +50,12 @@ export default function AboutMe() {
 
     return (
         <div className="about-me flex justify-center items-center flex-col">
+            <div className='shapes'>
+                {svgArray.map(svg => {
+                    return <img src={svg} alt='svg' className='svg' />
+                })}
+                <img src={zigzag} alt="zig" className='svg' />
+            </div>
             <img src={Me} alt="picture of me" className='rounded-full m-4' id='me' />
             <div ref={ref} className="text-3xl text-white font-bold">
                 <p className='m-0'>Hello!</p>
