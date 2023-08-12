@@ -6,7 +6,7 @@ export default function Header() {
         <div className=''>
             <header className="flex justify-center items-center bg-blue-950 shadow-xl">
                 <img src={whirl} alt="something" className='absolute -z-20' />
-                <ul className="flex text-white text-2xl font-thin m-4">
+                <ul className="flex text-white text-3xl font-normal m-4">
                     <li className="mx-10 shake transition ease-in-out hover:text-sky-300 duration-300 z-10">
                         <a href='#'>About Me</a>
                     </li>
