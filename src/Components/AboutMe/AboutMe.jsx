@@ -95,15 +95,23 @@ export default function AboutMe() {
                     return <img src={svg} alt='svg' className='svg translate-x-[-300px]' style={styleObject} key={index} />;
                 })}
             </div>
-            <div className="mt-[-15rem]">
-                <img src={glowCircle} alt="" className='glow skew-x-12 absolute -z-10' />
+            <div className="">
+                <img src={glowCircle} alt="" className='glow skew-x-12 absolute -z-[2]' />
                 <img src={glowTriangle} alt="" className='glow translate-x-[-40%] translate-y-[-40%] skew-y-[-15deg] skew-x-[10deg] absolute -z-10' />
-                <img src={glowSquare} alt="" className='glow translate-x-[-60%] skew-x-[-20deg] absolute -z-20' />
+                <img src={glowSquare} alt="" className='glow translate-x-[-60%] skew-x-[-20deg] absolute -z-10' />
                 <img src={Me} alt="picture of me" className='rounded-full' id='me' />
-                <div ref={ref} className="text-3xl text-white font-bold">
-                    <p className='m-0'>Hello!</p>
-                    <p className=''>My name is Hunter Tran.</p>
-                </div>
+            </div>
+            <div ref={ref} className="text-center text-3xl text-white font-bold">
+                <p className='mt-2'>Hello there!</p>
+                <p className='max-w-[75rem] m-2'>
+                    I'm Hunter Tran,
+                    a Full Stack Web Developer on an endless journey of exploration.
+                    I thrive on scouring the digital realm,
+                    discovering new ways to simplify my programming life.
+                    From innovative techniques to cutting-edge tools,
+                    I'm passionate about turning challenges into elegant solutions,
+                    creating seamless experiences from front to back end.
+                </p>
             </div>
         </div>
     )
