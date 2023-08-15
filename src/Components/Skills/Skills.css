@@ -1,0 +1,25 @@
+.dots {
+
+}
+
+.skills {
+    height: 100vh;
+    /* margin-top: -30px; */
+    color: white;
+    background: url('../../SVGs/Wave-10s-1920px.svg');
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+@keyframes waveAnimation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+}
+
+#wave1, #wave2, #wave3, #wave4, #wave5 {
+    animation: waveAnimation 10s infinite;
+}
