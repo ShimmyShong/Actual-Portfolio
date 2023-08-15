@@ -104,7 +104,7 @@ export default function AboutMe() {
             <p className='mb-8 font-extrabold text-6xl text-white p-4 name'>HUNTER TRAN</p>
             <div ref={ref} className="flex flex-col justify-center items-center text-center text-3xl text-white font-bold">
                 <img src={Me} alt="picture of me" className='rounded-full' id='me' />
-                <p className='max-w-[75rem] m-2'>
+                <p className='max-w-[75rem] m-2 text'>
                     I'm a Full Stack Web Developer on an endless journey of exploration.
                     I thrive on scouring the digital realm,
                     discovering new ways to simplify my programming life.

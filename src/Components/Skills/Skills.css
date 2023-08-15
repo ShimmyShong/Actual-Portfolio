@@ -1,7 +1,3 @@
-.dots {
-
-}
-
 .skills {
     height: 100vh;
     /* margin-top: -30px; */
@@ -11,15 +7,37 @@
     background-repeat: repeat;
 }
 
-@keyframes waveAnimation {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-50%);
-    }
+.transparent {
+    opacity: 0;
 }
 
-#wave1, #wave2, #wave3, #wave4, #wave5 {
-    animation: waveAnimation 10s infinite;
+.icon:hover {
+    transform: scale(2);
 }
+
+.pop-in {
+    animation: pop-in 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.5) translateY(-100px) rotate(-10deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.15) translateY(20px) rotate(15deg);
+  }
+  70% {
+    transform: scale(0.9) translateY(-10px) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) translateY(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
