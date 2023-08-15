@@ -63,6 +63,7 @@ export default function AboutMe() {
         entries.forEach(entry => {
             console.log(entry)
             if (entry.isIntersecting) { // the isIntersection property of each entry indicates whether the element is intersecting with the viewport at the given threshold
+                entry.target.classList.remove('transparent') // this is adding the class that causes the animation to initialize
                 entry.target.classList.add('slide-up') // this is adding the class that causes the animation to initialize
                 observer.unobserve(entry.target)
             }
@@ -102,7 +103,7 @@ export default function AboutMe() {
                 {/* <img src={Me} alt="picture of me" className='rounded-full' id='me' /> */}
             </div>
             <p className='mb-8 font-extrabold text-6xl text-white p-4 name'>HUNTER TRAN</p>
-            <div ref={ref} className="flex flex-col justify-center items-center text-center text-3xl text-white font-bold">
+            <div ref={ref} className="flex flex-col justify-center items-center text-center text-3xl text-white font-bold transparent">
                 <img src={Me} alt="picture of me" className='rounded-full' id='me' />
                 <p className='max-w-[75rem] m-2 text'>
                     I'm a Full Stack Web Developer on an endless journey of exploration.

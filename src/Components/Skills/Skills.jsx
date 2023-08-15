@@ -46,17 +46,42 @@ const Skills = () => {
 
     return (
         <div className='skills flex justify-center items-center flex-col'>
-            <div className='flex flex-col justify-center items-center w-[80%] h-[80%] rounded-xl bg-slate-50'>
-                <h1 className='text-xl text-black font-extrabold'>My Skills</h1>
-                <div ref={ref} className='icons w-[80%] grid grid-cols-4 gap-24'>
-                    <img src={react} alt="ReactJS" className='transparent' />
-                    <img src={express} alt="ExpressJS" className='transparent' />
-                    <img src={mongodb} alt="MongoDB" className='transparent' />
-                    <img src={node} alt="Node.js" className='transparent' />
-                    <img src={sequelize} alt="Sequelize" className='transparent' />
-                    <img src={tailwind} alt="Tailwind CSS" className='transparent' />
-                    <img src={graphql} alt="GraphQL" className='transparent' />
-                    <img src={git} alt="Git version control" className='transparent' />
+            <h1 className='text-black font-extrabold z-10 mb-8 text-5xl text-white'>My Skills</h1>
+            <div className='container flex flex-col justify-center items-center w-[80%] h-[85%] rounded-xl'>
+                <div className='bg-slate-50 w-[98%] h-[98%] rounded-xl absolute'></div>
+                <div ref={ref} className='icons w-[85%] grid grid-cols-4 gap-16 text-white'>
+                    <div className='z-20 text-center transparent'>
+                        <img src={react} alt="ReactJS" className='' />
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>REACT</p>
+                    </div>
+                    <div className='z-20 text-center transparent'>
+                        <img src={express} alt="ExpressJS" className='' />
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>ExpressJS</p>
+                    </div>
+                    <div className='z-20 text-center transparent'>
+                        <img src={mongodb} alt="MongoDB" className='' />
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>MongoDB</p>
+                    </div>
+                    <div className='z-20 text-center transparent'>
+                        <img src={node} alt="Node.js" className='' />
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>NodeJS</p>
+                    </div>
+                    <div className='z-20 text-center transparent'>
+                        <img src={sequelize} alt="Sequelize" className='' />
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>Sequelize</p>
+                    </div>
+                    <div className='z-20 text-center transparent'>
+                        <img src={tailwind} alt="Tailwind CSS" className='' />
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>Tailwind</p>
+                    </div>
+                    <div className='z-20 text-center transparent'>
+                        <img src={graphql} alt="GraphQL" className='' />
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>GraphQL</p>
+                    </div>
+                    <div className='z-20 text-center transparent'>
+                        <img src={git} alt="Git version control" className='' />
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>Version Control</p>
+                    </div>
                 </div>
             </div>
         </div>
