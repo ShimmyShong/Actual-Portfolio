@@ -100,7 +100,6 @@ export default function AboutMe() {
                 <img src={glowCircle} alt="" className='glow skew-x-12 absolute -z-[2]' />
                 <img src={glowTriangle} alt="" className='glow translate-x-[-40%] translate-y-[-40%] skew-y-[-15deg] skew-x-[10deg] absolute -z-10' />
                 <img src={glowSquare} alt="" className='glow translate-x-[-60%] skew-x-[-20deg] absolute -z-10' />
-                {/* <img src={Me} alt="picture of me" className='rounded-full' id='me' /> */}
             </div>
             <p className='mb-8 font-extrabold text-6xl text-white p-4 name'>HUNTER TRAN</p>
             <div ref={ref} className="flex flex-col justify-center items-center text-center text-3xl text-white font-bold transparent">

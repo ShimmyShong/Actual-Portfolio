@@ -21,8 +21,15 @@
     height:100%;
     left:10px;
     top:0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #9e50c8 46%, #adddfa 100%); 
+    background-image: linear-gradient(43deg, #4158D0 0%, #8ab2fd 46%, #adddfa 100%); 
     filter: blur(40px);
+}
+
+.head {
+    text-shadow: -1px 2px 0 #6488cd,
+    4px 2px 0 #6488cd,
+    4px -1px 0 #6488cd,
+    -1px -1px 0 #6488cd;
 }
 
 .gradient {
@@ -35,7 +42,7 @@
 }
 
 .p-1 {
-    background-image: linear-gradient(43deg, #8395f2 0%, #bb72e2 46%, #adddfa 100%); 
+    background-image: linear-gradient(43deg, #8395f2 0%, #7283e2 46%, #adddfa 100%); 
     filter: brightness(100%);
     z-index: 1;
 }

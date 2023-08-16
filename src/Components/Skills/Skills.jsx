@@ -46,13 +46,13 @@ const Skills = () => {
 
     return (
         <div className='skills flex justify-center items-center flex-col'>
-            <h1 className='text-black font-extrabold z-10 mb-8 text-5xl text-white'>My Skills</h1>
+            <h1 className='head font-extrabold z-10 mb-8 text-5xl text-white border-b-2 border-indigo-500 p-2'>My Skills</h1>
             <div className='container flex flex-col justify-center items-center w-[80%] h-[85%] rounded-xl'>
                 <div className='bg-slate-50 w-[98%] h-[98%] rounded-xl absolute'></div>
                 <div ref={ref} className='icons w-[85%] grid grid-cols-4 gap-16 text-white'>
                     <div className='z-20 text-center transparent'>
                         <img src={react} alt="ReactJS" className='' />
-                        <p className='p-1 text-3xl font-bold rounded-3xl'>REACT</p>
+                        <p className='p-1 text-3xl font-bold rounded-3xl'>React</p>
                     </div>
                     <div className='z-20 text-center transparent'>
                         <img src={express} alt="ExpressJS" className='' />
