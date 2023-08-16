@@ -45,7 +45,7 @@ const Skills = () => {
     }, []);
 
     return (
-        <div className='skills flex justify-center items-center flex-col'>
+        <div id='skills' className='flex justify-center items-center flex-col'>
             <h1 className='head font-extrabold z-10 mb-8 text-5xl text-white border-b-2 border-indigo-500 p-2'>My Skills</h1>
             <div className='container flex flex-col justify-center items-center w-[80%] h-[85%] rounded-xl'>
                 <div className='bg-slate-50 w-[98%] h-[98%] rounded-xl absolute'></div>

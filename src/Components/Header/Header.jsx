@@ -8,13 +8,13 @@ export default function Header() {
                 <img src={whirl} alt="something" className='absolute -z-20' />
                 <ul className="flex text-white text-3xl font-normal m-4">
                     <li className="mx-10 shake transition ease-in-out hover:text-sky-300 duration-300 z-10">
-                        <a href='#'>About Me</a>
+                        <a href='#about-me'>About Me</a>
                     </li>
                     <li className="mx-10 shake transition ease-in-out hover:text-sky-300 z-10">
-                        <a href='#'>Skills</a>
+                        <a href='#skills'>Skills</a>
                     </li>
                     <li className="mx-10 shake transition ease-in-out hover:text-sky-300 z-10">
-                        <a href='#'>Projects</a>
+                        <a href='#projects'>Projects</a>
                     </li>
                     <li className="mx-10 shake transition ease-in-out hover:text-sky-300 z-10">
                         <a href='#'>Contact</a>

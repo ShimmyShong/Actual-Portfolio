@@ -39,7 +39,7 @@ const projectArray = [
 
 export default function Projects() {
     return (
-        <div className="projects">
+        <div id="projects">
             <div className="grid grid-cols-3 gap-4 m-8">
                 {projectArray.map((project, index) => {
                     return (

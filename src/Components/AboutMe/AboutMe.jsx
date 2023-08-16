@@ -86,7 +86,7 @@ export default function AboutMe() {
     }, [])
 
     return (
-        <div className="about-me flex justify-center items-center flex-col">
+        <div id='about-me' className="flex justify-center items-center flex-col">
             <div className='shapes'>
                 {shuffledArray.map((svg, index) => {
                     const randomVar = getRandomVar(); // Get an array of random style properties
