@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import ProjectModal from "../ProjectModal/ProjectModal";
 import '../Projects/Projects.css'
 import appointme from '../../Images/appointme.jpg'
 import coolectible$ from '../../Images/coolectible$.jpg'
@@ -9,55 +10,63 @@ const projectArray = [
         title: 'Appointment Management App',
         image: appointme,
         description: 'A web application for managing appointments and schedules.',
-        github: 'https://github.com/yourusername/appointme',
-        live: 'https://www.appointmeapp.com',
+        github: 'https://github.com/EFP18/AppointMe',
+        live: 'https://appointme-deploy-73ae09842608.herokuapp.com/',
+        modalDescription: 'modal description',
+        modalStackImages: 'modal stack images',
     },
     {
         title: 'Coolectible$ Marketplace',
         image: coolectible$,
         description: 'An online marketplace for buying and selling collectibles.',
-        github: 'https://github.com/yourusername/coolectible-marketplace',
-        live: 'https://www.coolectiblemarketplace.com',
+        github: 'https://github.com/ds055/collectible-database',
+        live: 'https://blooming-retreat-76948.herokuapp.com/',
+        modalDescription: 'modal description',
+        modalStackImages: 'modal stack images',
     },
     {
         title: 'Out-n-About Travel Blog',
         image: outnabout,
         description: 'A travel blog sharing adventures and stories from around the world.',
-        github: 'https://github.com/yourusername/outnabout-blog',
-        live: 'https://www.outnabouttravelblog.com',
+        github: 'https://github.com/jtpheonix13/stunning-guacamole',
+        live: 'https://jtpheonix13.github.io/stunning-guacamole/',
+        modalDescription: 'modal description',
+        modalStackImages: 'modal stack images',
     },
     {
         title: 'Quiz App',
         image: quiz,
         description: 'A fun and educational quiz application to test your knowledge.',
-        github: 'https://github.com/yourusername/quiz-app',
-        live: 'https://www.quizapp.com',
+        github: 'https://github.com/ShimmyShong/basic-quiz-website',
+        live: 'https://shimmyshong.github.io/basic-quiz-website/',
+        modalDescription: 'modal description',
+        modalStackImages: 'modal stack images',
     },
 ];
 
 
 
 export default function Projects() {
+    // const [showModal, setShowModal] = useState(false)
+
+
     return (
         <div id="projects">
-            <div className="grid grid-cols-3 gap-4 m-8">
+            <h1>Projects</h1>
+            <div className="grid grid-cols-3 gap-4 m-12">
                 {projectArray.map((project, index) => {
                     return (
-                        <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href={project.live}>
+                        <div key={index} className="projectCard bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href={project.live} target="_blank" rel="noopener noreferrer"> {/* use target="_blank" rel="noopener noreferrer to open links on new tab" */}
                                 <img className="rounded-t-lg" src={project.image} alt='' />
                             </a>
                             <div className="p-5">
-                                <a href={project.live}>
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
+                                <a className='' href={project.live} target="_blank" rel="noopener noreferrer">
+                                    <h5 className="cardTitle mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
                                 </a>
                                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{project.description}</p>
-                                <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </a>
+                                {/* passing in ProjectModal with props for each project */}
+                                <ProjectModal modalDescription={project.modalDescription} modalStackImages={project.modalStackImages} title={project.title} image={project.image} />
                             </div>
                         </div>
                     )

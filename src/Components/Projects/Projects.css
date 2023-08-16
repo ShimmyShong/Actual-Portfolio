@@ -1,3 +1,24 @@
-.projects {
+#projects {
     height: 100vh;
+}
+
+.projectCard {
+    overflow: hidden;
+}
+
+.projectCard img {
+    transition: filter .2s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.projectCard:hover img {
+    filter: grayscale(0%)
+}
+
+.cardTitle {
+    transition: color .2s ease-in-out;
+}
+
+.cardTitle:hover {
+    color: rgb(125 211 252);
 }
