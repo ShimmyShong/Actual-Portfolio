@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProjectModal from "../ProjectModal/ProjectModal";
 import '../Projects/Projects.css'
 import express from '../../SVGs/express-original.svg'
@@ -58,13 +58,10 @@ const projectArray = [
 ];
 
 export default function Projects() {
-    // const [showModal, setShowModal] = useState(false)
-
-
     return (
         <div id="projects" className="max-h-[110vh] min-h-[100vh]">
-            <h1>Projects</h1>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 m-12">
+            <h1 className="project-title flex justify-center items-center font-extrabold z-10 text-5xl text-white p-2">Projects</h1>
+            <div className="grid 2xl:grid-cols-3 md:grid-cols-2 gap-6 m-12">
                 {projectArray.map((project, index) => {
                     return (
                         <>

@@ -87,6 +87,7 @@ export default function AboutMe() {
 
     return (
         <div id='about-me' className="flex justify-center items-center flex-col">
+            <h1 className='mt-6 font-extrabold text-6xl text-white p-4 name text-center'>HUNTER TRAN</h1>
             <div className='shapes'>
                 {shuffledArray.map((svg, index) => {
                     const randomVar = getRandomVar(); // Get an array of random style properties
@@ -97,12 +98,11 @@ export default function AboutMe() {
                 })}
             </div>
             <div className="">
-                <img src={glowCircle} alt="" className='glow skew-x-12 absolute -z-[2]' />
-                <img src={glowTriangle} alt="" className='glow translate-x-[-40%] translate-y-[-40%] skew-y-[-15deg] skew-x-[10deg] absolute -z-10' />
-                <img src={glowSquare} alt="" className='glow translate-x-[-60%] skew-x-[-20deg] absolute -z-10' />
+                <img src={glowCircle} alt="" className='glow skew-x-12 absolute -z-[2] translate-x-[-20%] translate-y-[-20%] scale-90' />
+                <img src={glowTriangle} alt="" className='glow translate-x-[-60%] translate-y-[-40%] skew-y-[-15deg] skew-x-[10deg] rotate-90 scale-110 absolute -z-10' />
+                <img src={glowSquare} alt="" className='glow translate-x-[-80%] translate-y-[-15%] skew-x-[-20deg] scale-125 rotate-[20deg] absolute -z-10' />
             </div>
-            <p className='mb-8 font-extrabold text-6xl text-white p-4 name'>HUNTER TRAN</p>
-            <div ref={ref} className="flex flex-col justify-center items-center text-center text-3xl text-white font-bold transparent">
+            <div ref={ref} className="flex flex-col justify-center items-center text-center text-xl md:text-3xl text-white font-bold transparent">
                 <img src={Me} alt="picture of me" className='rounded-full' id='me' />
                 <p className='max-w-[75rem] m-2 text'>
                     I'm a Full Stack Web Developer on an endless journey of exploration.

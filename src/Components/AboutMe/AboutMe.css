@@ -18,8 +18,8 @@
 }
 
 .shapes {
- position: absolute;
- display: flex;
+  position: absolute;
+  display: flex;
 }
 
 .svg {
@@ -85,7 +85,7 @@
     padding: 5px;
     background: linear-gradient(90deg, rgba(178,174,255,1) 0%, rgba(67,241,255,1) 13%, rgba(200,230,255,1) 43%, rgba(64,180,241,1) 75%, rgba(0,212,255,1) 100%);
     box-shadow: 0px 0px 20px 0px rgb(208, 255, 255);
-    animation: delayedFadeIn 2.5s ease-in-out .2s forwards;
+    animation: delayedFadeIn 3s ease-in-out .2s forwards;
 }
 
 .transparent {
@@ -97,7 +97,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
-  50% {
+  55% {
     opacity: 0;
     transform: translateY(-20px);
   }
