@@ -1,5 +1,5 @@
 #skills {
-    height: 100vh;
+    min-height: 80vh;
     color: white;
     background: url('../../SVGs/Wave-10s-1920px.svg');
     background-size: auto;
@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-.p-1 {
+.skill-back {
     background-image: linear-gradient(43deg, #8395f2 0%, #7283e2 46%, #adddfa 100%); 
     filter: brightness(100%);
     z-index: 1;
@@ -72,3 +72,8 @@
         opacity: 1;
     }
 }
+
+/* @media (max-width: small) {
+    #skills {
+    }
+} */

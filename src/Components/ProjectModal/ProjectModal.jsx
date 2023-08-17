@@ -20,28 +20,28 @@ const ProjectModal = (props) => {
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                     >
-                        <div className="relative w-[80%] my-6 mx-auto">
+                        <div className="relative lg:w-[80%] w-[95%] my-6 mx-auto">
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
                                 <div className="flex items-center justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
-                                    <h3 className="text-3xl font-semibold">
+                                    <h3 className="lg:text-3xl font-semibold">
                                         {title}
                                     </h3>
-                                    <div className='w-[40%] flex flex-row justify-end'>
+                                    <div className='w-[20rem] lg:w-[25rem] flex flex-row justify-end'>
                                         {modalStackImages.map((stack, index) => {
                                             return (
-                                                <img src={stack} alt={stack} key={index} className='modal-section w-[3.5rem] m-4 overflow-hidden' />
+                                                <img src={stack} alt={stack} key={index} className='modal-section w-[3.5rem] m-4 overflow-hidden obj' />
                                             )
                                         })}
                                     </div>
                                 </div>
                                 {/*body*/}
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid xl:grid-cols-2 md:grid-cols-1 gap-4 m-2 md:m-0">
                                     <div className='row-span-3'>
-                                        <img src={image} alt="" className='modal-section' />
+                                        <img src={image} alt="" className='modal-section h-full' />
                                     </div>
-                                    <p className="my-4 text-slate-500 text-lg leading-relaxed row-span-1">
+                                    <p className="m-4 sm:m-2 text-slate-900 text-lg leading-relaxed row-span-1">
                                         {modalDescription}
                                     </p>
                                 </div>
