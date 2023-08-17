@@ -5,6 +5,7 @@
 
 .projectCard {
     overflow: hidden;
+    border-color: #102156;
 }
 
 .projectCard img {

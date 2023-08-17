@@ -9,6 +9,11 @@ import node from '../../SVGs/nodejs-plain.svg'
 import tailwind from '../../SVGs/tailwindcss-plain.svg'
 import git from '../../SVGs/git-plain.svg'
 import graphql from '../../SVGs/graphql-plain.svg'
+import google from '../../SVGs/Google_Maps_icon_(2020).svg'
+import javascript from '../../SVGs/javascript.svg'
+import css from '../../SVGs/css-3.svg'
+import html from '../../SVGs/html-1.svg'
+
 import appointme from '../../Images/appointme.jpg'
 import coolectible$ from '../../Images/coolectible$.jpg'
 import outnabout from '../../Images/outnabout.jpg'
@@ -39,7 +44,7 @@ const projectArray = [
         github: 'https://github.com/jtpheonix13/stunning-guacamole',
         live: 'https://jtpheonix13.github.io/stunning-guacamole/',
         modalDescription: 'modal description',
-        modalStackImages: [git, git, git, git, git],
+        modalStackImages: [git, google, javascript, html, css],
     },
     {
         title: 'Quiz App',
@@ -48,7 +53,7 @@ const projectArray = [
         github: 'https://github.com/ShimmyShong/basic-quiz-website',
         live: 'https://shimmyshong.github.io/basic-quiz-website/',
         modalDescription: 'modal description',
-        modalStackImages: 'modal stack images',
+        modalStackImages: [javascript, html, css],
     },
 ];
 
@@ -62,19 +67,22 @@ export default function Projects() {
             <div className="grid grid-cols-3 gap-6 m-12">
                 {projectArray.map((project, index) => {
                     return (
-                        <div key={index} className="projectCard bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href={project.live} target="_blank" rel="noopener noreferrer"> {/* use target="_blank" rel="noopener noreferrer" to open links on new tab */}
-                                <img className="rounded-t-lg" src={project.image} alt='' />
-                            </a>
-                            <div className="p-5 flex flex-col justify-center items-center">
-                                <a className='' href={project.live} target="_blank" rel="noopener noreferrer">
-                                    <h5 className="cardTitle mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
+                        <>
+                            <div key={index} className="projectCard bg-white border-4 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href={project.live} target="_blank" rel="noopener noreferrer"> {/* use target="_blank" rel="noopener noreferrer" to open links on new tab */}
+                                    <img className="" src={project.image} alt='' />
                                 </a>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{project.description}</p>
-                                {/* passing in ProjectModal with props for each project */}
-                                <ProjectModal modalDescription={project.modalDescription} modalStackImages={project.modalStackImages} title={project.title} image={project.image} />
+                                <div className="p-5 flex flex-col justify-center items-center">
+                                    <a className='' href={project.live} target="_blank" rel="noopener noreferrer">
+                                        <h5 className="cardTitle mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.title}</h5>
+                                    </a>
+                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{project.description}</p>
+                                    {/* passing in ProjectModal with props for each project */}
+                                    <ProjectModal modalDescription={project.modalDescription} modalStackImages={project.modalStackImages} title={project.title} image={project.image} github={project.github} live={project.live} />
+                                </div>
                             </div>
-                        </div>
+                        </>
+
                     )
                 })}
             </div>

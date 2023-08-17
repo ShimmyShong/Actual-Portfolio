@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
+import githubLogo from '../../SVGs/github-logo.svg'
 
 const ProjectModal = (props) => {
     let [showModal, setShowModal] = useState(false)
-    const { title, modalDescription, modalStackImages, image } = props;
+    const { title, modalDescription, modalStackImages, image, github, live } = props;
 
 
     return (
         <div>
             <button
-                className="bg-sky-700 text-white hover:bg-white hover:text-sky-800 hover:border-sky-800 border border-sky-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="bg-indigo-800 text-white hover:text-indigo-800 hover:bg-white hover:border-indigo-800 border border-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
                 onClick={() => setShowModal(true)}
             >
@@ -47,19 +48,23 @@ const ProjectModal = (props) => {
                                 {/*footer*/}
                                 <div className="flex items-center justify-center p-6 border-t border-solid border-slate-200 rounded-b">
                                     <button
-                                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                        className="bg-red-500 text-white hover:text-red-500 hover:bg-white hover:border-red-500 border rounded-lg px-6 py-3 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-4 mb-1 ease-linear transition-all duration-150"
                                         type="button"
                                         onClick={() => setShowModal(false)}
                                     >
-                                        Close
+                                        Exit
                                     </button>
-                                    <button
-                                        className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        type="button"
-                                        onClick={() => setShowModal(false)}
-                                    >
-                                        Save Changes
-                                    </button>
+                                    <a href={live} target="_blank" rel="noopener noreferrer">
+                                        <button
+                                            className="bg-indigo-800 text-white hover:text-indigo-800 hover:bg-white hover:border-indigo-800 border border-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                            type="button"
+                                        >
+                                            Live Deployment
+                                        </button>
+                                    </a>
+                                    <a href={github} target="_blank" rel="noopener noreferrer" className='transition duration-150 ease-in-out invert hover:invert-0 scale-[130%] m-4 mb-5 border-gray-900 border rounded-full p-[.2rem] bg-white'>
+                                        <img src={githubLogo} alt="github logo" className='modal-section' />
+                                    </a>
                                 </div>
                             </div>
                         </div>
