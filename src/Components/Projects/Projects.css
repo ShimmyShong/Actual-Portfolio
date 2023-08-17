@@ -1,5 +1,6 @@
 #projects {
-    height: 100vh;
+    /* height: 110vh; */
+    background-image: url('../../SVGs/shell.svg');
 }
 
 .projectCard {
@@ -21,4 +22,8 @@
 
 .cardTitle:hover {
     color: rgb(125 211 252);
+}
+
+.modal-section {
+    filter: grayscale(0%) !important;
 }
