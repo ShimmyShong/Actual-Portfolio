@@ -25,7 +25,7 @@ const projectArray = [
         description: 'A web application for managing appointments, services, and client information.',
         github: 'https://github.com/EFP18/AppointMe',
         live: 'https://appointme-deploy-73ae09842608.herokuapp.com/',
-        modalDescription: ``,
+        modalDescription: `In my role on the AppointMe project, I played a versatile and impactful part in enhancing the functionality and user experience of the platform. Some of my key contributions include: bug fixing and troubleshooting, form input handling, UI enhancement, and collaborative problem solving. My diverse set of responsibilities showcased my ability to navigate various aspects of software development, making me an invaluable asset to the project.`,
         modalStackImages: [react, mongodb, express, node, graphql, git],
     },
     {
@@ -34,7 +34,7 @@ const projectArray = [
         description: 'Coolectibles is a web application specifically designed to cater to the needs of collectors and hobbyists.',
         github: 'https://github.com/ds055/collectible-database',
         live: 'https://blooming-retreat-76948.herokuapp.com/',
-        modalDescription: 'modal description',
+        modalDescription: `In the development of the Coolectibles web application, I played a pivotal role as the front-end designer, contributing to the creation of an immersive and visually appealing platform for collectors and hobbyists. Through the utilization of Tailwind CSS, I meticulously designed and styled the application's components and elements.The responsive and modular nature of Tailwind CSS allowed for the creation of a consistent and visually harmonious design across various devices and screen sizes.`,
         modalStackImages: [express, node, sequelize, tailwind, git],
     },
     {
@@ -52,7 +52,7 @@ const projectArray = [
         description: 'A fun and educational quiz application to test your knowledge.',
         github: 'https://github.com/ShimmyShong/basic-quiz-website',
         live: 'https://shimmyshong.github.io/basic-quiz-website/',
-        modalDescription: 'modal description',
+        modalDescription: `I am the sole creator of a captivating and interactive quiz website designed to engage and challenge users while enhancing their knowledge. Leveraging my expertise in JavaScript, DOM manipulation, and user interface design, I developed a feature-rich quiz platform that offers a seamless and enjoyable experience. To maintain excitement and unpredictability, I integrated a randomized question selection mechanism. This ensures that users encounter a varied set of questions in each quiz session, promoting repeated engagement.`,
         modalStackImages: [javascript, html, css],
     },
 ];

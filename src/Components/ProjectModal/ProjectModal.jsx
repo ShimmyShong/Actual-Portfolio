@@ -24,29 +24,29 @@ const ProjectModal = (props) => {
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
-                                <div className="flex items-center justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
-                                    <h3 className="lg:text-3xl font-semibold">
+                                <div className="flex flex-col md:flex-row items-center justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
+                                    <h3 className="text-xl md:text-3xl font-semibold">
                                         {title}
                                     </h3>
-                                    <div className='w-[20rem] lg:w-[25rem] flex flex-row justify-end'>
+                                    <div className='w-[23rem] md:w-[25rem] flex flex-row justify-center'>
                                         {modalStackImages.map((stack, index) => {
                                             return (
-                                                <img src={stack} alt={stack} key={index} className='modal-section w-[3.5rem] m-4 overflow-hidden obj' />
+                                                <img src={stack} alt={stack} key={index} className='modal-section w-[1.5rem] md:w-[3.5rem] m-4 overflow-hidden obj' />
                                             )
                                         })}
                                     </div>
                                 </div>
                                 {/*body*/}
-                                <div className="grid xl:grid-cols-2 md:grid-cols-1 gap-4 m-2 md:m-0">
+                                <div className="grid xl:grid-cols-2 md:grid-cols-1 gap-4 m-0 md:m-2">
                                     <div className='row-span-3'>
                                         <img src={image} alt="" className='modal-section h-full' />
                                     </div>
-                                    <p className="m-4 sm:m-2 text-slate-900 text-lg leading-relaxed row-span-1">
+                                    <p className="mx-4 sm:m-2 text-slate-900 text-sm md:text-lg leading-relaxed row-span-1">
                                         {modalDescription}
                                     </p>
                                 </div>
                                 {/*footer*/}
-                                <div className="flex items-center justify-center p-6 border-t border-solid border-slate-200 rounded-b">
+                                <div className="flex items-center justify-center p-2 border-t border-solid border-slate-200 rounded-b">
                                     <button
                                         className="bg-red-500 text-white hover:text-red-500 hover:bg-white hover:border-red-500 border rounded-lg px-6 py-3 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-4 mb-1 ease-linear transition-all duration-150"
                                         type="button"
