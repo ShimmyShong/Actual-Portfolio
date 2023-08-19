@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import ProjectModal from "../ProjectModal/ProjectModal";
 import '../Projects/Projects.css'
 import express from '../../SVGs/express-original.svg'
@@ -58,14 +58,54 @@ const projectArray = [
 ];
 
 export default function Projects() {
+    const ref = useRef(null);
+
+    const animateOnScroll = (entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                const icon = entry.target;
+
+                const animationEndHandler = () => {
+                    icon.classList.remove('scale-in');
+                    // the animationend event that fires when a CSS animation completes
+                    icon.removeEventListener('animationend', animationEndHandler);
+                };
+
+                icon.classList.remove('transparent');
+                icon.classList.add('scale-in');
+                // this is removing the 'scale-in' class after the animation ends, necessary for modals to work
+                icon.addEventListener('animationend', animationEndHandler, { once: true });
+
+                observer.unobserve(icon);
+            }
+        });
+    };
+
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, options);
+
+        if (ref.current) {
+            const icons = ref.current.querySelectorAll('.transparent');
+            icons.forEach((icon) => observer.observe(icon));
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <div id="projects" className="">
             <h1 className="project-title flex justify-center items-center font-extrabold z-10 text-5xl text-white p-2">Projects</h1>
-            <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 m-12">
+            <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 m-12">
                 {projectArray.map((project, index) => {
                     return (
                         <>
-                            <div key={index} className="projectCard bg-white border-4 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                            <div key={index} className="projectCard bg-white border-4 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transparent">
                                 <a href={project.live} target="_blank" rel="noopener noreferrer"> {/* use target="_blank" rel="noopener noreferrer" to open links on new tab */}
                                     <img className=" border-b-2 border-gray-300" src={project.image} alt='' />
                                 </a>

@@ -34,3 +34,25 @@
     4px -1px 0 #8c57ff,
     -1px -1px 0 #8c57ff;
 }
+
+.scale-in {
+    animation: scale-in 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.15);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

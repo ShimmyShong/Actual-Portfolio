@@ -18,3 +18,40 @@ code {
 html {
   scroll-behavior: smooth;
 }
+
+@media (prefers-reduced-motion) {
+  * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+    animation-name: none !important;
+  }
+
+  #me {
+    opacity: 1 !important;
+  }
+
+  .transparent {
+    opacity: 1 !important;
+  }
+
+  .skill {
+    opacity: 1 !important;
+  }
+
+  .projectCard {
+    opacity: 1 !important;
+  }
+
+  .footer-icon {
+    filter: none !important;
+    border-radius: 1rem !important;
+}
+
+  .shapes {
+    opacity: 0 !important;
+  }
+
+}
