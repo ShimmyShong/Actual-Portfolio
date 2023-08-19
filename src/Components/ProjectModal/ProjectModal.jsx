@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import githubLogo from '../../SVGs/github-logo.svg'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 const ProjectModal = (props) => {
     let [showModal, setShowModal] = useState(false)
     const { title, modalDescription, modalStackImages, image, github, live } = props;
+
+    // this useEffect disables body scrolling, while still allowing modal scrolling
+    useEffect(() => {
+        if (showModal === true) {
+            disableBodyScroll(document.body);
+        } else if (showModal === false) {
+            enableBodyScroll(document.body);
+        }
+    }, [showModal])
 
 
     return (
@@ -17,9 +27,7 @@ const ProjectModal = (props) => {
             </button>
             {showModal ? (
                 <>
-                    <div
-                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-                    >
+                    <div className="flex justify-center items-center flex-col overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
                         <div className="relative lg:w-[80%] w-[95%] my-6 mx-auto">
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -39,7 +47,7 @@ const ProjectModal = (props) => {
                                 {/*body*/}
                                 <div className="grid xl:grid-cols-2 md:grid-cols-1 gap-4 m-0 md:m-2">
                                     <div className='row-span-3'>
-                                        <img src={image} alt="" className='modal-section h-full' />
+                                        <img src={image} alt="" className='modal-section h-auto' />
                                     </div>
                                     <p className="mx-4 sm:m-2 text-slate-900 text-sm md:text-lg leading-relaxed row-span-1">
                                         {modalDescription}
