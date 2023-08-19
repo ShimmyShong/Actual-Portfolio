@@ -107,7 +107,7 @@ export default function Projects() {
                         <>
                             <div key={index} className="projectCard bg-white border-4 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transparent">
                                 <a href={project.live} target="_blank" rel="noopener noreferrer"> {/* use target="_blank" rel="noopener noreferrer" to open links on new tab */}
-                                    <img className=" border-b-2 border-gray-300" src={project.image} alt='' />
+                                    <img className=" border-b-2 border-gray-300" src={project.image} alt={`${project.name}`} />
                                 </a>
                                 <div className="p-5 flex flex-col justify-center items-center">
                                     <a className='' href={project.live} target="_blank" rel="noopener noreferrer">

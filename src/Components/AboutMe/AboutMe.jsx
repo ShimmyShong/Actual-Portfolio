@@ -61,7 +61,6 @@ export default function AboutMe() {
     // this is called when the intersection of the observed element (ref) with the viewport changes
     const animateOnScroll = async (entries, observer) => { // entries is an array of 'IntersectionOberveryEntry' objects
         entries.forEach(entry => {
-            console.log(entry)
             if (entry.isIntersecting) { // the isIntersection property of each entry indicates whether the element is intersecting with the viewport at the given threshold
                 entry.target.classList.remove('transparent') // this is adding the class that causes the animation to initialize
                 entry.target.classList.add('slide-up') // this is adding the class that causes the animation to initialize

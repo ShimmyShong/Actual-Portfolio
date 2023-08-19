@@ -3,15 +3,27 @@ import githubLogo from '../../SVGs/github-logo.svg'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 const ProjectModal = (props) => {
-    let [showModal, setShowModal] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+    const [previousScrollPosition, setPreviousScrollPosition] = useState(0)
     const { title, modalDescription, modalStackImages, image, github, live } = props;
+
+    // on iOS, the website immediately goes to the top when opening a modal, this helps to bring the screen back down to where they were previously at
+    const openModal = () => {
+        setPreviousScrollPosition(window.scrollY);
+        setShowModal(true)
+    }
+
+    const closeModal = () => {
+        window.scrollTo(0, previousScrollPosition)
+        setShowModal(false)
+    }
 
     // this useEffect disables body scrolling, while still allowing modal scrolling
     useEffect(() => {
         if (showModal === true) {
-            disableBodyScroll(document.body);
+            disableBodyScroll(document.documentElement);
         } else if (showModal === false) {
-            enableBodyScroll(document.body);
+            enableBodyScroll(document.documentElement);
         }
     }, [showModal])
 
@@ -21,7 +33,7 @@ const ProjectModal = (props) => {
             <button
                 className="bg-indigo-800 text-white hover:text-indigo-800 hover:bg-white hover:border-indigo-800 border border-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
-                onClick={() => setShowModal(true)}
+                onClick={() => openModal()}
             >
                 Show More
             </button>
@@ -58,7 +70,7 @@ const ProjectModal = (props) => {
                                     <button
                                         className="bg-red-500 text-white hover:text-red-500 hover:bg-white hover:border-red-500 border rounded-lg px-6 py-3 background-transparent font-bold uppercase text-sm outline-none focus:outline-none mr-4 mb-1 ease-linear transition-all duration-150"
                                         type="button"
-                                        onClick={() => setShowModal(false)}
+                                        onClick={() => closeModal()}
                                     >
                                         Exit
                                     </button>
