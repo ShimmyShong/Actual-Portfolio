@@ -119,3 +119,9 @@
         transform:translateY(0)
     }
 }
+
+@media (width < 600px) {
+  .svg {
+    display: none;
+  }
+}

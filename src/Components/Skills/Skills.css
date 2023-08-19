@@ -7,19 +7,17 @@
 }
 
 .container {
-    background-image: linear-gradient(43deg, #4158D0 0%, #9e50c8 46%, #adddfa 100%); 
-    margin-right:25px;
+    background-image: linear-gradient(43deg, #4158D0 0%, #9e50c8 46%, #adddfa 100%);
     filter: brightness(100%);
     z-index: 1;
 }
 
 .container:before {
     z-index:-2;
-    position: absolute;
-    content:"";
+    position: fixed;
     width:100%;
     height:100%;
-    left:10px;
+    left:0;
     top:0;
     background-image: linear-gradient(43deg, #4158D0 0%, #8ab2fd 46%, #adddfa 100%); 
     filter: blur(40px);
@@ -72,8 +70,3 @@
         opacity: 1;
     }
 }
-
-/* @media (max-width: small) {
-    #skills {
-    }
-} */
