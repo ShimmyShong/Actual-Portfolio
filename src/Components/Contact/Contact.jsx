@@ -4,7 +4,7 @@ import '../Contact/Contact.css'
 const Contact = () => {
     return (
         <div id='contact' className='mt-14 flex justify-center items-center'>
-            <div className='bg-white h-auto max-w-[40%] min-w-[30%]  p-8 flex justify-center items-center flex-col rounded-xl'>
+            <div className='bg-white h-auto w-auto m-4 p-8 flex justify-center items-center flex-col rounded-xl'>
                 <h1 className='m-8 font-bold text-2xl text-center'>Please Contact Me Here!</h1>
                 {/* <input class="w-[80%] h-12 px-4 mb-2 text-lg text-gray-700 placeholder-gray-400 border rounded-lg focus:shadow-outline" type="text" placeholder="Name" />
                 <input class="w-[80%] h-12 px-4 mb-2 text-lg text-gray-700 placeholder-gray-400 border rounded-lg focus:shadow-outline" type="email" placeholder="Email" />
@@ -12,7 +12,7 @@ const Contact = () => {
                 <form
                     action="https://formspree.io/f/mjvqwvja"
                     method="POST"
-                    class='max-w-[80%] mx-auto md:max-w-md grid grid-rows-2 gap-4 justify-center items-stretch font-bold'
+                    class='w-auto mx-auto md:max-w-md grid grid-rows-2 gap-4 justify-center items-stretch font-bold'
                 >
                     <label class="flex flex-col">
                         Your email:
