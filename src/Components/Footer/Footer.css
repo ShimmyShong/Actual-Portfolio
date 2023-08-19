@@ -1,3 +1,33 @@
 #footer {
-    height: 40vh;
+
+}
+
+.icon-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icon {
+    width: 8rem; 
+    height:8rem; 
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: aliceblue;
+    filter: brightness(50%) sepia(100%) hue-rotate(180deg);
+    transition: filter 0.3s, border-radius 0.3s;
+}
+
+.footer-icon:hover {
+    filter: none;
+    border-radius: 1rem;
+}
+
+@media (width < 500px) {
+    .footer-icon {
+        width: 6rem; 
+        height: 6rem; 
+        padding: 1rem;
+    }
 }
