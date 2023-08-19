@@ -16,7 +16,7 @@ export default function Header() {
                         <a href='#projects'>Projects</a>
                     </li>
                     <li className="mx-3 md:mx-10 shake transition ease-in-out hover:text-sky-300 z-10">
-                        <a href='#'>Contact</a>
+                        <a href='#contact'>Contact</a>
                     </li>
                 </ul>
             </header>

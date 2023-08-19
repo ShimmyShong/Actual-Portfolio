@@ -20,7 +20,7 @@ import outnabout from '../../Images/outnabout.jpg'
 import quiz from '../../Images/quiz.jpg'
 const projectArray = [
     {
-        title: 'Appointment Management App',
+        title: 'Appointment Management Website',
         image: appointme,
         description: 'A web application for managing appointments, services, and client information.',
         github: 'https://github.com/EFP18/AppointMe',
@@ -59,9 +59,9 @@ const projectArray = [
 
 export default function Projects() {
     return (
-        <div id="projects" className="max-h-[110vh] min-h-[100vh]">
+        <div id="projects" className="">
             <h1 className="project-title flex justify-center items-center font-extrabold z-10 text-5xl text-white p-2">Projects</h1>
-            <div className="grid 2xl:grid-cols-3 md:grid-cols-2 gap-6 m-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 m-12">
                 {projectArray.map((project, index) => {
                     return (
                         <>

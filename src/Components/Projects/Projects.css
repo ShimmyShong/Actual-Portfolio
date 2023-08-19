@@ -1,5 +1,4 @@
 #projects {
-    /* height: 110vh; */
     background-image: url('../../SVGs/shell.svg');
 }
 
@@ -30,8 +29,8 @@
 }
 
 .project-title {
-        text-shadow: -1px 2px 0 #9d57ff,
-    4px 2px 0 #9d57ff,
-    4px -1px 0 #9d57ff,
-    -1px -1px 0 #9d57ff;
+        text-shadow: -1px 2px 0 #8c57ff,
+    4px 2px 0 #8c57ff,
+    4px -1px 0 #8c57ff,
+    -1px -1px 0 #8c57ff;
 }
