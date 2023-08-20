@@ -29,7 +29,7 @@ const projectArray = [
         modalStackImages: [react, mongodb, express, node, graphql, git],
     },
     {
-        title: 'Coolectible$',
+        title: 'Coolectibles',
         image: coolectible$,
         description: 'Coolectibles is a web application specifically designed to cater to the needs of collectors and hobbyists.',
         github: 'https://github.com/ds055/collectible-database',

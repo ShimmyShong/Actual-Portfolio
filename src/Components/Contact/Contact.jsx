@@ -64,6 +64,8 @@ const Contact = () => {
                 }
             } catch (error) {
                 setSubmitMessage('Message was sent!')
+                setEmailValue('')
+                setMessageValue('')
             }
         }
     };
