@@ -13,12 +13,23 @@ import google from '../../SVGs/Google_Maps_icon_(2020).svg'
 import javascript from '../../SVGs/javascript.svg'
 import css from '../../SVGs/css-3.svg'
 import html from '../../SVGs/html-1.svg'
+import nextjs from '../../SVGs/next-js.svg'
 
 import appointme from '../../Images/appointme.jpg'
 import coolectible$ from '../../Images/coolectible$.jpg'
 import outnabout from '../../Images/outnabout.jpg'
 import quiz from '../../Images/quiz.jpg'
+import bondImage from '../../Images/chrome_ARRJjTjeZV (1).jpg'
+
 const projectArray = [
+    {
+        title: 'Bail Bonding Website',
+        image: bondImage,
+        description: 'A bail bonding website made with the latest technologies.',
+        live: 'https://bond-mockup.vercel.app/',
+        modalDescription: `I was tasked with the challenging project of completely redesigning a bail bond company's website from the ground up. The company faced a unique hurdle in that they no longer had access to the original website's code. Despite this obstacle, I successfully reimagined and rebuilt the website to better represent the company's identity and services. o meet the client's specific requirements, the website was designed to be highly search engine optimized, ensuring that potential clients could easily find the company's services online. The project also prioritized accessibility, making the website user-friendly for individuals with diverse needs. At the request of the company, an earlier version of the website was displayed, showcasing the new design and improved functionality. The result is a website that not only captures the essence of the bail bond business but also performs incredibly well in terms of user experience, accessibility, and search engine visibility. This project stands as a testament to the successful revitalization of a digital presence, meeting both the client's expectations and the needs of their online audience.`,
+        modalStackImages: [nextjs, react, tailwind, git],
+    },
     {
         title: 'Appointment Management Website',
         image: appointme,

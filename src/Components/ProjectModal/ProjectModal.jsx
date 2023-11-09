@@ -81,10 +81,15 @@ const ProjectModal = (props) => {
                                         >
                                             Live Deployment
                                         </button>
+
                                     </a>
-                                    <a href={github} target="_blank" rel="noopener noreferrer" className='transition duration-150 ease-in-out invert hover:invert-0 scale-[130%] m-4 mb-5 border-gray-900 border rounded-full p-[.2rem] bg-white'>
-                                        <img src={githubLogo} alt="github logo" className='modal-section' />
-                                    </a>
+                                    {
+                                        github ?
+                                            <a href={github} target="_blank" rel="noopener noreferrer" className='transition duration-150 ease-in-out invert hover:invert-0 scale-[130%] m-4 mb-5 border-gray-900 border rounded-full p-[.2rem] bg-white'>
+                                                <img src={githubLogo} alt="github logo" className='modal-section' />
+                                            </a> :
+                                            <></>
+                                    }
                                 </div>
                             </div>
                         </div>
