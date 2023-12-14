@@ -20,8 +20,17 @@ import coolectible$ from '../../Images/coolectible$.jpg'
 import outnabout from '../../Images/outnabout.jpg'
 import quiz from '../../Images/quiz.jpg'
 import bondImage from '../../Images/chrome_ARRJjTjeZV (1).jpg'
+import aimegle from '../../Images/AImegle.png'
 
 const projectArray = [
+    {
+        title: 'AIMegle',
+        image: aimegle,
+        description: `AImegle provides engaging one-on-one conversations with randomly generated AI personalities, allowing users to connect based on shared interests if desired.`,
+        live: 'https://aimegle.vercel.app/',
+        modalDescription: `AImegle was conceptualized and brought to life using the Next.js framework, enabling a seamless and responsive platform for dynamic web interactions. Leveraging the power of the OpenAI API within this framework was integral to crafting an engaging user experience. The platform operates on the premise of replicating the spontaneous encounters akin to platforms like Omegle, where users are randomly paired with AI-generated personalities for one-on-one conversations. While the primary focus is on these chance encounters, the OpenAI integration adds depth by allowing for adaptive and contextually driven interactions. The customization feature, where users can input their interests for potential matching with AI personalities sharing those interests, enriches the experience by occasionally providing more tailored conversations. This combination offers a nuanced blend of randomness and personalization, fostering unexpected yet diverse exchanges that simulate the thrill of engaging with a new person each time. The Next.js framework ensured smooth navigation and responsiveness, while the OpenAI API added the intelligence behind the scenes, resulting in a platform that redefines the spontaneity of online conversations through AI-driven interactions.`,
+        modalStackImages: [react, nextjs, tailwind, git],
+    },
     {
         title: 'Bail Bonding Website',
         image: bondImage,
